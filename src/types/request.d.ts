@@ -29,3 +29,16 @@ export interface postCodeBody {
 export interface GtmId {
 	gtmId: string | null;
 }
+
+export type ProductType = {
+	clothesId: number,
+	createdAt: string|null,
+	updatedAt: string|null,
+	detailImg: string|null,
+	likeCount: number|null,
+	clothesName: string|null,
+	preview: string|null,
+	designerId: number|null,
+	designerName: string|null,
+	score: number|null
+}
