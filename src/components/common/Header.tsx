@@ -11,13 +11,13 @@ const HeaderComponent = styled.div`
 	justify-content: space-between;
 `;
 
-const BackgroundWrapper = styled.div<{ isUserPickPage: boolean }>`
+const BackgroundWrapper = styled.div<{ $isUserPickPage: boolean }>`
 	height: 100%;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	${({ isUserPickPage }) => (isUserPickPage ? 'color: white; z-index: 3;' : 'background-color: white;')}
+	${({ $isUserPickPage }) => ($isUserPickPage ? 'color: white; z-index: 3;' : 'background-color: white;')}
 `;
 
 const LogoImg = styled.img`
@@ -61,7 +61,7 @@ const Header = ({ where }: { where: string }) => {
 			<>
 				<div style={{ height: '10px', width: '100%' }}></div>
 				<div className="headerLayout">
-					<BackgroundWrapper isUserPickPage={isUserPickPage}>
+					<BackgroundWrapper $isUserPickPage={isUserPickPage}>
 						<HeaderComponent className="headerComponent">
 							<StyledFiChevronLeft size="26px" onClick={handleBack} />
 							<LogoImg onClick={handleClick('/')} width="35px" src="/img/artiLogo.png" loading="lazy" />
@@ -74,7 +74,7 @@ const Header = ({ where }: { where: string }) => {
 	} else if (where === 'vote') {
 		return (
 			<div className="headerLayout">
-				<BackgroundWrapper isUserPickPage={isUserPickPage}>
+				<BackgroundWrapper $isUserPickPage={isUserPickPage}>
 					<HeaderComponent className="headerComponent">
 						{isUserPickPage ? (
 							<StyledFiChevronLeft size="26px" onClick={() => router.push('../../vote')} />
@@ -90,7 +90,7 @@ const Header = ({ where }: { where: string }) => {
 	} else {
 		return (
 			<div className="headerLayout">
-				<BackgroundWrapper isUserPickPage={isUserPickPage}>
+				<BackgroundWrapper $isUserPickPage={isUserPickPage}>
 					<HeaderComponent className="headerComponent">
 						<StyledFiChevronLeft size="26px" onClick={handleBack} />
 						<div style={{ fontSize: '2rem', fontWeight: 600 }}>{where}</div>

@@ -1,10 +1,10 @@
-import Voting from '@/components/voting/Voting';
+import UserVoting from '@/components/voting/UserVoting';
 import React from 'react';
 
 const page = () => {
 	return (
 		<>
-			<Voting />
+			<UserVoting />
 		</>
 	);
 };

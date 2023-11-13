@@ -1,10 +1,10 @@
-import Voting from '@/components/voting/Voting';
+import FinalPick from '@/components/voting/FinalPick';
 import React from 'react';
 
 const page = () => {
 	return (
 		<>
-			<Voting />
+			<FinalPick />
 		</>
 	);
 };

@@ -1,10 +1,10 @@
-import Voting from '@/components/voting/Voting';
+import Search from '@/components/search/Search';
 import React from 'react';
 
 const page = () => {
 	return (
 		<>
-			<Voting />
+			<Search />
 		</>
 	);
 };

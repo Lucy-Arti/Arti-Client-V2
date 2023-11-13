@@ -1,5 +1,5 @@
 'use client';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { useEffect, useState } from 'react';
 import { TABS } from '@constant/index.ts';
 import { usePathname, useRouter } from 'next/navigation';
@@ -22,9 +22,9 @@ const NavBarContent = styled.div`
 	color: #c6c6c6;
 `;
 
-const Tab = styled.div<{ active: boolean }>`
+const Tab = styled.div<{ $active: boolean }>`
 	cursor: pointer;
-	color: ${(props) => (props.active ? '#6bda01' : '#c6c6c6')};
+	color: ${(props) => (props.$active ? '#6bda01' : '#c6c6c6')};
 `;
 
 const NavBar = () => {
@@ -52,7 +52,7 @@ const NavBar = () => {
 		<NavBarWrapper>
 			<NavBarContent>
 				{tabLabels.map((tabs, index) => (
-					<Tab key={index} onClick={handleClick(`/${tabs.route}`)} active={tab === index}>
+					<Tab key={index} onClick={handleClick(`/${tabs.route}`)} $active={tab === index}>
 						{tabs.label}
 					</Tab>
 				))}
