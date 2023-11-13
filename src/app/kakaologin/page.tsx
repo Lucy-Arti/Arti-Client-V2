@@ -1,4 +1,5 @@
-// import { kakaoLogin } from '@/apis/login';
+'use client';
+
 import { useEffect } from 'react';
 import { postCode } from '@/apis/login';
 import { useSetRecoilState } from 'recoil';
