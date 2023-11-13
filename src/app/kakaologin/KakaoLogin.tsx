@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 import styled from 'styled-components';
 
 const KakaoLogin = () => {
-	const route= useRouter();
+	const route = useRouter();
 	const setIsLogin = useSetRecoilState(isLoginAtom);
 
 	const code: string | null = new URL(window.location.href).searchParams.get('code');
@@ -36,13 +36,13 @@ const KakaoLogin = () => {
 export default KakaoLogin;
 
 const Container = styled.div`
-		height: 98vh;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-	`;
-	const FontSize = styled.div`
-		font-size: 24px;
-		font-weight: 700;
-	`;
+	height: 98vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+`;
+const FontSize = styled.div`
+	font-size: 24px;
+	font-weight: 700;
+`;
