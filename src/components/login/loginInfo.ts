@@ -1,9 +1,6 @@
 // export const Redirect_uri = 'https://arti-fashion.site/kakaologin';
 
-import dotenv from 'dotenv';
-dotenv.config();
-
-export const KAKAO_KEY = process.env.KAKAO_KEY;
+export const KAKAO_KEY = process.env.NEXT_PUBLIC_API_KEY;
 
 export const Redirect_uri = 'http://localhost:3000/kakaologin';
 
