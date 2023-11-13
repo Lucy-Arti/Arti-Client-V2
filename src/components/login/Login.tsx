@@ -1,12 +1,12 @@
 // import React from 'react';
 import '@styles/commonStyle.css';
-// import { kakaoURL } from './loginInfo';
+import { kakaoURL } from './loginInfo';
 import styled from 'styled-components';
 
 const Login = ({ where }: { where: string }) => {
-	// const handleLogin = () => {
-	// 	window.location.href = kakaoURL;
-	// };
+	const handleLogin = () => {
+		window.location.href = kakaoURL;
+	};
 
 	let content: string = '';
 
@@ -27,13 +27,8 @@ const Login = ({ where }: { where: string }) => {
 						</span>
 					))}
 				</ContentCss>
-				<img className="loginBanner" src={'/img/loginBanner.png'} loading="lazy"></img>
-				<img
-					src={'/img/kakao.png'}
-					className="kakao"
-					// onClick={handleLogin}
-					loading="lazy"
-				/>
+				<img className="loginBanner" src={'/img/loginBanner.png'}></img>
+				<img src={'/img/kakao.png'} className="kakao" onClick={handleLogin} />
 			</LoginSection>
 		</>
 	);
