@@ -1,4 +1,3 @@
-'use client'
 import styled from 'styled-components';
 import { getMarked, postMarked } from '@/apis/list';
 import { RankData } from '@/types/request';

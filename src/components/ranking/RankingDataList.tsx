@@ -1,4 +1,3 @@
-'use client'
 import styled from 'styled-components';
 import RankingCard from './RankingCard';
 import { RankData } from '@/types/request';

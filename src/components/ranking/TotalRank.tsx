@@ -1,11 +1,11 @@
-'use client'
 import { useEffect, useState } from 'react';
 import { getTotalScoreList } from '@/apis/vote';
 import styled from 'styled-components';
 import RankingDataList from './RankingDataList';
-// import ModalLogin from '../list/ModalLogin';
-// import ModalProductSaved from '../list/ModalProductSaved';
-// import ModalProductUnsaved from '../list/ModalProductUnsaved';
+import ModalLogin from '../common/ModalLogin';
+import ModalProductSaved from '../common/ModalProductSaved';
+import ModalProductUnsaved from '../common/ModalProductUnsaved';
+
 
 const Wrapper = styled.div`
 	width: 100%;
@@ -29,7 +29,7 @@ const TotalRank = () => {
 
 	return (
 		<>
-			{/* {
+			{
 			(loginModalIsOpen === true) && 
 			<ModalLogin setLoginModalIsOpen={setLoginModalIsOpen} />
 		}
@@ -37,8 +37,8 @@ const TotalRank = () => {
 			(savedModalIsOpen === true) && <ModalProductSaved />
 		}
 		{
-			(unsavedModalIsOpen === true) && <ModalProductUnsaved />
-		} */}
+			(unsavedModalIsOpen === true) && <ModalProductUnsaved/>
+		}
 			<Wrapper>
 				<RankingDataList
 					datas={rankData}
