@@ -2,6 +2,7 @@ import StyledComponentsRegistry from './lib/registry';
 import './global.css';
 import type { Metadata } from 'next';
 import RecoidContextProvider from './recoilContextProvider';
+import GoogleTagManager from './GoogleTagManager';
 
 export const metadata: Metadata = {
 	title: 'Arti',
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<StyledComponentsRegistry>
 					<RecoidContextProvider>{children}</RecoidContextProvider>
 				</StyledComponentsRegistry>
+				<GoogleTagManager gtmId="GTM-P8H6W3G8" />
 			</body>
 		</html>
 	);
