@@ -24,7 +24,7 @@ const DisplayCard = ({ data, handleCardClick }: { data: MatchData; handleCardCli
 
 	return (
 		<Card>
-			<ContentSection isClicked={isClicked} onClick={handleCardClickInternal}>
+			<ContentSection $isClicked={isClicked} onClick={handleCardClickInternal}>
 				<img src={data.preview} loading="lazy" />
 			</ContentSection>
 			<Info>
@@ -47,7 +47,7 @@ const Card = styled.div`
 	align-items: center;
 	gap: 1rem;
 `;
-const ContentSection = styled.div<{isClicked:boolean}>`
+const ContentSection = styled.div<{$isClicked:boolean}>`
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -56,8 +56,8 @@ const ContentSection = styled.div<{isClicked:boolean}>`
 	object-fit: cover;
 	overflow: hidden;
 	border-radius: 5px;
-	border: ${(props) => (props.isClicked ? '3px solid #6bda01' : 'none')};
-	background-color: ${(props) => (props.isClicked ?  '3px solid #6bda01' : 'none')};
+	border: ${(props) => (props.$isClicked ? '3px solid #6bda01' : 'none')};
+	background-color: ${(props) => (props.$isClicked ?  '3px solid #6bda01' : 'none')};
 	transition:
 		border 0.1s ease-in-out,
 		background-color 0.1s ease-in-out;
