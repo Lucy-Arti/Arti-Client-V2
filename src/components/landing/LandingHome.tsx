@@ -6,7 +6,7 @@ const LandingHome = () => {
 	return (
 		<>
 			<LandingSection />
-            <LandingSection2/>
+			<LandingSection2 />
 		</>
 	);
 };
