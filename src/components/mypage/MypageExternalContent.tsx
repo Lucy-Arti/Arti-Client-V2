@@ -5,28 +5,7 @@ const MypageExternalContent = () => {
     const onClickToExternel = (url:string) => {
         window.open(url, "_blank");
     }
-    const ColumnSort = styled.div`
-        display: flex;
-        width: 90%;
-        flex-direction: column; 
-        margin-top: 2rem;
-    `
-    const MenuList = styled.div`
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 2rem 1rem 2rem 1rem;
-        border-bottom: 2px solid #f5f5f5;
-        & > .text{
-            font-size: 1.8rem;
-        }
-        &.last{
-            border-bottom: none;
-        }
-        &:hover{
-            cursor: pointer;
-        }
-    `
+
   return (
     <ColumnSort>
         {/* <div css={menulist}>
@@ -50,3 +29,26 @@ const MypageExternalContent = () => {
 }
 
 export default MypageExternalContent
+
+const ColumnSort = styled.div`
+    display: flex;
+    width: 90%;
+    flex-direction: column; 
+    margin-top: 2rem;
+`
+const MenuList = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1rem 2rem 1rem;
+    border-bottom: 2px solid #f5f5f5;
+    & > .text{
+        font-size: 1.8rem;
+    }
+    &.last{
+        border-bottom: none;
+    }
+    &:hover{
+        cursor: pointer;
+    }
+`

@@ -11,64 +11,6 @@ const MypageUpperContent = () => {
 	const randomNumFloor = Math.floor(randomNum);
 	const route = useRouter();
 
-	const ColumnSort = styled.div`
-		display: flex;
-		width: 90%;
-		flex-direction: column;
-	`;
-	const ProfileWrapper = styled.div`
-		display: flex;
-		margin: 2.5rem 0 4rem 1rem;
-		align-items: center;
-	`;
-    const UserBox = styled.div`
-        display: flex;
-		flex-direction: column;
-		margin-left: 2rem;
-        & > .username {
-            font-size: 3rem;
-            font-weight: bolder;
-            margin-bottom: 1rem;
-        }
-        & > .useremail {
-            font-size: 1.5rem;
-        }
-    `
-	const BtnWrapper = styled.div`
-		display: flex;
-		filter: drop-shadow(0 0 0.3rem #9e9e9e);
-		background-color: white;
-		border-radius: 15px;
-		justify-content: center;
-		align-items: center;
-		img {
-			width: 30%;
-		}
-	`;
-	const BtnStyle = styled.div`
-		display: flex;
-		flex-basis: 33%;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		/* background-color: white; */
-		gap: 1.5rem;
-		padding: 3rem 0 3rem 0;
-		&:hover {
-			cursor: pointer;
-		}
-		&.start {
-			border-right: 2px solid #f3f3f3;
-		}
-		&.last {
-			border-left: 2px solid #f3f3f3;
-		}
-        & > .text{
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-	`;
-
 	return (
 		<ColumnSort>
 			<ProfileWrapper>
@@ -121,3 +63,62 @@ const MypageUpperContent = () => {
 };
 
 export default MypageUpperContent;
+
+
+const ColumnSort = styled.div`
+	display: flex;
+	width: 90%;
+	flex-direction: column;
+`;
+const ProfileWrapper = styled.div`
+	display: flex;
+	margin: 2.5rem 0 4rem 1rem;
+	align-items: center;
+`;
+const UserBox = styled.div`
+	display: flex;
+	flex-direction: column;
+	margin-left: 2rem;
+	& > .username {
+		font-size: 3rem;
+		font-weight: bolder;
+		margin-bottom: 1rem;
+	}
+	& > .useremail {
+		font-size: 1.5rem;
+	}
+`
+const BtnWrapper = styled.div`
+	display: flex;
+	filter: drop-shadow(0 0 0.3rem #9e9e9e);
+	background-color: white;
+	border-radius: 15px;
+	justify-content: center;
+	align-items: center;
+	img {
+		width: 30%;
+	}
+`;
+const BtnStyle = styled.div`
+	display: flex;
+	flex-basis: 33%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* background-color: white; */
+	gap: 1.5rem;
+	padding: 3rem 0 3rem 0;
+	&:hover {
+		cursor: pointer;
+	}
+	&.start {
+		border-right: 2px solid #f3f3f3;
+	}
+	&.last {
+		border-left: 2px solid #f3f3f3;
+	}
+	& > .text{
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
+`

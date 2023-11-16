@@ -35,94 +35,6 @@ const MypageVoted = () => {
 		getProductLists();
 	}, []);
 
-	const FlexColumn = styled.div`
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	`;
-	const ArticleWrapper = styled.div`
-		display: flex;
-		flex-direction: column;
-		width: 98%;
-		align-items: center;
-	`;
-	const PromoBox = styled.div`
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		width: 90%;
-		background-color: rgba(232, 255, 211, 1);
-		border-radius: 10px;
-        & > img{
-            margin-right: 2rem;
-            :hover {
-                cursor: pointer;
-            }
-        }
-	`;
-    const PromoText = styled.div`
-        display: flex;
-        flex-direction: column;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        gap: 0.6rem;
-        & > .upper{
-            font-weight: 400;
-            font-size: 1.5rem;
-            margin-left: 2rem;
-        }
-        & > .lower{
-            font-weight: 600;
-            font-size: 1.5rem;
-            margin-left: 2rem;
-        }
-    `
-	const GridWrapper = styled.div`
-		display: grid;
-		margin: 2rem;
-		/* border: 1px solid black; */
-		grid-template-columns: repeat(2, 1fr);
-		/* grid-template-rows: repeat(3,1fr); */
-		grid-auto-flow: row;
-		grid-gap: 2rem;
-		overflow-y: scroll;
-		&::-webkit-scrollbar {
-			display: none;
-		}
-	`;
-    const NoticeWrapper = styled.div`
-        display: flex;
-        flex-direction: column;
-        height: fit-content;
-        justify-content: center;
-        align-items: center;
-    `
-    const NoticeBox = styled.div`
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        & > .imgbox {
-            width: 20rem;
-            margin-bottom: 5rem;
-        }
-        & > .textbox {
-            font-size: 2rem;
-            text-align: center;
-            font-weight: 600;
-        }
-        & > .button-style{
-            display: flex;
-            background-color: rgba(107, 218, 1, 1);
-            padding: 1rem 2rem 1rem 2rem;
-            border-radius: 8px;
-            margin-top: 4rem;
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-    `
 	return (
 		<>
 			<FlexColumn>
@@ -193,3 +105,92 @@ const MypageVoted = () => {
 };
 
 export default MypageVoted;
+
+const FlexColumn = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+`;
+const ArticleWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	width: 98%;
+	align-items: center;
+`;
+const PromoBox = styled.div`
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 90%;
+	background-color: rgba(232, 255, 211, 1);
+	border-radius: 10px;
+	& > img{
+		margin-right: 2rem;
+		:hover {
+			cursor: pointer;
+		}
+	}
+`;
+const PromoText = styled.div`
+	display: flex;
+	flex-direction: column;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	gap: 0.6rem;
+	& > .upper{
+		font-weight: 400;
+		font-size: 1.5rem;
+		margin-left: 2rem;
+	}
+	& > .lower{
+		font-weight: 600;
+		font-size: 1.5rem;
+		margin-left: 2rem;
+	}
+`
+const GridWrapper = styled.div`
+	display: grid;
+	margin: 2rem;
+	/* border: 1px solid black; */
+	grid-template-columns: repeat(2, 1fr);
+	/* grid-template-rows: repeat(3,1fr); */
+	grid-auto-flow: row;
+	grid-gap: 2rem;
+	overflow-y: scroll;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+`;
+const NoticeWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	height: fit-content;
+	justify-content: center;
+	align-items: center;
+`
+const NoticeBox = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	& > .imgbox {
+		width: 20rem;
+		margin-bottom: 5rem;
+	}
+	& > .textbox {
+		font-size: 2rem;
+		text-align: center;
+		font-weight: 600;
+	}
+	& > .button-style{
+		display: flex;
+		background-color: rgba(107, 218, 1, 1);
+		padding: 1rem 2rem 1rem 2rem;
+		border-radius: 8px;
+		margin-top: 4rem;
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
+`

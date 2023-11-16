@@ -77,58 +77,9 @@ const ListCard = (props:CardBoxType) => {
         }
     }
 
-    const CardBox = styled.div`
-		display: flex;
-        flex-direction: column;
-		height: fit-content;
-	`
-    const ImgBox = styled.div`
-        display: flex;
-        border-radius: 10px;
-        background-image : url(${props.preview});
-        background-position: top center;
-        background-size: cover;
-        width : 100%;
-        height : 35rem;
-        justify-content : flex-end;
-        align-items : flex-end;
-    `
-
-    const GetHeight = styled.div`
-        height: 35rem;
-        width: 100%;
-    `
-    const FlexRow = styled.div`
-        display: flex;
-        align-items: center;
-        margin-top: 1rem;
-        margin-left: 1rem;
-    `
-    const ProfileWrapper = styled.div`
-        display: flex;
-        width: 10%;
-    `
-    const MakeBold = styled.div`
-        font-size: 1.5rem;
-        margin-left: 0.3rem;
-        font-weight: 600;
-    `
-    const FontSize = styled.div`
-        font-size: 1.5rem;
-        margin-left: 0.5rem;
-    `
-    const ImgDesign = styled.img`
-        margin : 1rem;
-    `
-    const Header = styled.div`
-    font-size: 2rem;
-    font-weight: 600;
-    margin: 1rem 1rem 2rem 1rem;
-`
-
   return (
         <CardBox>
-            <ImgBox onClick={() => (`/${props.clothesId}`)}>
+            <ImgBox preview={props.preview} onClick={() => (`/${props.clothesId}`)}>
                 {/* <GetHeight onClick={() => (`/${props.clothesId}`)} /> */}
                 <div>
                     {
@@ -151,3 +102,52 @@ const ListCard = (props:CardBoxType) => {
 }
 
 export default ListCard;
+
+const CardBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+`
+const ImgBox = styled.div<{preview: string|null}>`
+    display: flex;
+    border-radius: 10px;
+    background-image : ${(props) => `url(${props.preview})`};
+    background-position: top center;
+    background-size: cover;
+    width : 100%;
+    height : 35rem;
+    justify-content : flex-end;
+    align-items : flex-end;
+`
+
+const GetHeight = styled.div`
+    height: 35rem;
+    width: 100%;
+`
+const FlexRow = styled.div`
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-left: 1rem;
+`
+const ProfileWrapper = styled.div`
+    display: flex;
+    width: 10%;
+`
+const MakeBold = styled.div`
+    font-size: 1.5rem;
+    margin-left: 0.3rem;
+    font-weight: 600;
+`
+const FontSize = styled.div`
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+`
+const ImgDesign = styled.img`
+    margin : 1rem;
+`
+const Header = styled.div`
+font-size: 2rem;
+font-weight: 600;
+margin: 1rem 1rem 2rem 1rem;
+`
