@@ -79,7 +79,7 @@ const ListCard = (props:CardBoxType) => {
 
   return (
         <CardBox>
-            <ImgBox $preview={props.preview} onClick={() => (`/${props.clothesId}`)}>
+            <ImgBox $preview={props.preview} onClick={() => route.push(`/productlist/${props.clothesId}`)}>
                 {/* <GetHeight onClick={() => (`/${props.clothesId}`)} /> */}
                 <div>
                     {
