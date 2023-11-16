@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { useEffect, useRef, useState } from 'react';
 import { FiChevronLeft } from 'react-icons/fi';
 import { GetSearchProductList } from '@/apis/search';
@@ -24,18 +24,20 @@ const Search = () => {
 	// ios input fixed 에러 해결
 	useEffect(() => {
 		const handleInputBlur = () => {
-		  setTimeout(() => {
-			window.scrollTo(document.body.scrollLeft, document.body.scrollTop);
-		  }, 0);
+			if (typeof window !== 'undefined') {
+				setTimeout(() => {
+					window.scrollTo(document.body.scrollLeft, document.body.scrollTop);
+				}, 0);
+			}
 		};
-	  
+
 		document.addEventListener('focusout', handleInputBlur);
-	  
+
 		return () => {
-		  // Clean up the event listener when the component unmounts
-		  document.removeEventListener('focusout', handleInputBlur);
+			// Clean up the event listener when the component unmounts
+			document.removeEventListener('focusout', handleInputBlur);
 		};
-	  }, []);
+	}, []);
 
 	const getProducts = async () => {
 		if (inputText.current === null || inputText.current.value === '') {
@@ -71,14 +73,18 @@ const Search = () => {
 		}
 	};
 	const handleClick = () => {
-		window.scrollTo(0, 0);
+		if (typeof window !== 'undefined') {
+			window.scrollTo(0, 0);
+		}
 		getProducts();
 	};
 
 	const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
 		if (event.key === 'Enter') {
 			// Enter 키가 눌렸을 때 검색 함수 호출
-			window.scrollTo(0, 0);
+			if (typeof window !== 'undefined') {
+				window.scrollTo(0, 0);
+			}
 			getProducts();
 		}
 	};
@@ -123,9 +129,7 @@ const Search = () => {
 				</GridWrapper>
 			) : (
 				<TextBox>
-					<Text>
-						{alertText}에 대한 검색결과가 없습니다
-					</Text>
+					<Text>{alertText}에 대한 검색결과가 없습니다</Text>
 				</TextBox>
 			)}
 		</SearchSection>

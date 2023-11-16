@@ -5,7 +5,9 @@ import styled from 'styled-components';
 
 const Login = ({ where }: { where: string }) => {
 	const handleLogin = () => {
-		window.location.href = kakaoURL;
+		if (typeof window !== 'undefined') {
+			window.location.href = kakaoURL;
+		}
 	};
 
 	let content: string = '';

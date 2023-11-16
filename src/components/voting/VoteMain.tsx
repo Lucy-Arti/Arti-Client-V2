@@ -20,7 +20,9 @@ const VoteMain = () => {
 	const route = useRouter();
 	const handleClick = (page: string) => {
 		if (possible === 'defalut') {
-			window.location.reload();
+			if (typeof window !== 'undefined') {
+				window.location.reload();
+			}
 		} else if (possible === '투표 가능') {
 			console.log('투표가 가능해요');
 			route.push(page);
