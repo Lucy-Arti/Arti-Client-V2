@@ -5,8 +5,8 @@ import NavBar from '@/components/common/NavBar';
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<div>
-			<Header where="main" />
-			<NavBar />
+			{/* <Header where="main" />
+			<NavBar /> */}
 			<StyledComponentsRegistry>{children}</StyledComponentsRegistry>
 		</div>
 	);

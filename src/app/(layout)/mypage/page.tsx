@@ -1,8 +1,11 @@
+import MypageBasicView from '@/components/mypage/MypageBasicView'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>mypage</div>
+    <>
+      <MypageBasicView />
+    </>
   )
 }
 
