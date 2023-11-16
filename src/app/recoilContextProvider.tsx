@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { RecoilRoot, atom } from "recoil";
+import { RecoilRoot, atom } from 'recoil';
 import { recoilPersist } from 'recoil-persist';
 
 const { persistAtom } = recoilPersist();
@@ -23,6 +23,12 @@ export const userEmailAtom = atom({
 	effects_UNSTABLE: [persistAtom],
 });
 
+export const userRoleAtom = atom({
+	key: 'userRole',
+	default: '',
+	effects_UNSTABLE: [persistAtom],
+});
+
 export default function RecoidContextProvider({ children }: { children: React.ReactNode }) {
-  return <RecoilRoot>{children}</RecoilRoot>;
+	return <RecoilRoot>{children}</RecoilRoot>;
 }
