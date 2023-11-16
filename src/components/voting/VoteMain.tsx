@@ -38,7 +38,7 @@ const VoteMain = () => {
 	return (
 		<VoteSection>
 			<BannerSection>
-				<img src="/img/votemainbanner.png" loading="lazy" />
+				<img src="/img/votemainbanner.png" />
 			</BannerSection>
 			<StartBtn onClick={() => handleClick('vote/userVote')}>투표 시작하기</StartBtn>
 			<ShareSection>
