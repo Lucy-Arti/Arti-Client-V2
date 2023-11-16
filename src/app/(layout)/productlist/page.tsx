@@ -1,8 +1,12 @@
+import ListView from '@/components/productlist/ListView'
 import React from 'react'
+import '@styles/commonStyle.css';
 
 const page = () => {
   return (
-    <div>productlist</div>
+    <>
+      <ListView />
+    </>
   )
 }
 
