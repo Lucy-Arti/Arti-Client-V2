@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 		siteName: 'Arti',
 		images: [
 			{
-				url: '/img/desktopBanner1.png',
+				url: 'https://arti-fashion.site/img/desktopBanner1.png',
 			},
 		],
 		type: 'website',
