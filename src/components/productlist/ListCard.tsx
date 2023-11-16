@@ -79,7 +79,7 @@ const ListCard = (props:CardBoxType) => {
 
   return (
         <CardBox>
-            <ImgBox preview={props.preview} onClick={() => (`/${props.clothesId}`)}>
+            <ImgBox $preview={props.preview} onClick={() => (`/${props.clothesId}`)}>
                 {/* <GetHeight onClick={() => (`/${props.clothesId}`)} /> */}
                 <div>
                     {
@@ -108,10 +108,10 @@ const CardBox = styled.div`
     flex-direction: column;
     height: fit-content;
 `
-const ImgBox = styled.div<{preview: string|null}>`
+const ImgBox = styled.div<{$preview: string|null}>`
     display: flex;
     border-radius: 10px;
-    background-image : ${(props) => `url(${props.preview})`};
+    background-image : ${(props) => `url(${props.$preview})`};
     background-position: top center;
     background-size: cover;
     width : 100%;
