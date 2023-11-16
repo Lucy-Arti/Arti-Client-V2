@@ -1,6 +1,10 @@
 [build]
-command = "next build"
-publish = ".next"
+  base = "sporefare/"
+  command = "next build && next export"
+  publish = "out/"
 
 [[plugins]]
-package = "@netlify/plugin-nextjs"
+  package = "@netlify/plugin-nextjs"
+
+[[plugins]]
+  package = "netlify-plugin-cache-nextjs"
