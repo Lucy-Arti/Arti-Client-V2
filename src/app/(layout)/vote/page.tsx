@@ -1,12 +1,12 @@
-// import Voting from '@/components/voting/Voting';
-// import React from 'react';
+import Voting from '@/components/voting/Voting';
+import React from 'react';
 
-// const page = () => {
-// 	return (
-// 		<>
-// 			<Voting />
-// 		</>
-// 	);
-// };
+const page = () => {
+	return (
+		<>
+			<Voting />
+		</>
+	);
+};
 
-// export default page;
+export default page;
