@@ -97,71 +97,7 @@ const ProductDetail = () => {
 	};
 
 	const route = useRouter();
-	const FlexColumn = styled.div`
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	`;
-	const DesignerBox = styled.div`
-		display: flex;
-		align-items: center;
-		margin: 18px;
-		padding: 2rem 0 2rem 1.5rem;
-		border-radius: 10px;
-		background-color: white;
-		filter: drop-shadow(0 0 0.3rem #9e9e9e);
-        & > .imgwrapper{
-            display: flex;
-			width: 3rem;
-        }
-	`;
-	const MakeBold = styled.div`
-		font-size: 2rem;
-		margin-left: 1rem;
-		font-weight: 600;
-	`;
-	const FontSize = styled.div`
-		font-size: 2rem;
-		margin-left: 0.5rem;
-	`;
-	const Title = styled.div`
-		display: flex;
-		flex-wrap: wrap;
-		width: 70%;
-		font-size: 2rem;
-		font-weight: 600;
-		margin-left: 0.5rem;
-	`;
-	const FlexRow = styled.div`
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin: 3rem 2rem 3rem 2rem;
-		&.icon-box {
-			margin: 0;
-			gap: 1rem;
-		}
-	`;
-	const GapDesign = styled.div`
-		background-color: #f5f5f5;
-		height: 1rem;
-		width: 100%;
-		margin-top: 2rem;
-	`;
-	const HeartSection = styled.div`
-		width: fit-content;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 1px;
-		color: #ff4b8c;
-	`;
-    const HeartImg = styled.img`
-        &:hover{
-            cursor: pointer;
-        }
-    `
+
 	return (
 		<>
 			<FlexColumn>
@@ -215,3 +151,69 @@ const ProductDetail = () => {
 };
 
 export default ProductDetail;
+
+const FlexColumn = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+`;
+const DesignerBox = styled.div`
+	display: flex;
+	align-items: center;
+	margin: 18px;
+	padding: 2rem 0 2rem 1.5rem;
+	border-radius: 10px;
+	background-color: white;
+	filter: drop-shadow(0 0 0.3rem #9e9e9e);
+	& > .imgwrapper{
+		display: flex;
+		width: 3rem;
+	}
+`;
+const MakeBold = styled.div`
+	font-size: 2rem;
+	margin-left: 1rem;
+	font-weight: 600;
+`;
+const FontSize = styled.div`
+	font-size: 2rem;
+	margin-left: 0.5rem;
+`;
+const Title = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	width: 70%;
+	font-size: 2rem;
+	font-weight: 600;
+	margin-left: 0.5rem;
+`;
+const FlexRow = styled.div`
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 3rem 2rem 3rem 2rem;
+	&.icon-box {
+		margin: 0;
+		gap: 1rem;
+	}
+`;
+const GapDesign = styled.div`
+	background-color: #f5f5f5;
+	height: 1rem;
+	width: 100%;
+	margin-top: 2rem;
+`;
+const HeartSection = styled.div`
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1px;
+	color: #ff4b8c;
+`;
+const HeartImg = styled.img`
+	&:hover{
+		cursor: pointer;
+	}
+`

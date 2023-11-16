@@ -44,58 +44,7 @@ const MypageRecent = () => {
   useEffect(()=>{
       getProductLists();
   }, []);
-  const FlexColumn = styled.div`
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	`;
-
-	const GridWrapper = styled.div`
-		display: grid;
-		margin: 2rem;
-		/* border: 1px solid black; */
-		grid-template-columns: repeat(2, 1fr);
-		/* grid-template-rows: repeat(3,1fr); */
-		grid-auto-flow: row;
-		grid-gap: 2rem;
-		overflow-y: scroll;
-		&::-webkit-scrollbar {
-			display: none;
-		}
-	`;
-    const NoticeWrapper = styled.div`
-        display: flex;
-        flex-direction: column;
-        height: fit-content;
-        justify-content: center;
-        align-items: center;
-    `
-    const NoticeBox = styled.div`
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        & > .imgbox {
-            width: 20rem;
-            margin-bottom: 5rem;
-        }
-        & > .textbox {
-            font-size: 2rem;
-            text-align: center;
-            font-weight: 600;
-        }
-        & > .button-style{
-            display: flex;
-            background-color: rgba(107, 218, 1, 1);
-            padding: 1rem 2rem 1rem 2rem;
-            border-radius: 8px;
-            margin-top: 4rem;
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-    `
+  
 	return (
 		<>
 			<FlexColumn>
@@ -150,3 +99,56 @@ const MypageRecent = () => {
 }
 
 export default MypageRecent
+
+const FlexColumn = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+const GridWrapper = styled.div`
+    display: grid;
+    margin: 2rem;
+    /* border: 1px solid black; */
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(3,1fr); */
+    grid-auto-flow: row;
+    grid-gap: 2rem;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+`;
+const NoticeWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+`
+const NoticeBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    & > .imgbox {
+        width: 20rem;
+        margin-bottom: 5rem;
+    }
+    & > .textbox {
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 600;
+    }
+    & > .button-style{
+        display: flex;
+        background-color: rgba(107, 218, 1, 1);
+        padding: 1rem 2rem 1rem 2rem;
+        border-radius: 8px;
+        margin-top: 4rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+`
