@@ -36,8 +36,8 @@ const StyledSwiperSlide = styled(SwiperSlide)`
 `;
 
 const LandingSection = () => {
-	const router = useRouter();
 	const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
+	const router = useRouter();
 
 	const handleResize = () => {
 		setWindowWidth(typeof window !== 'undefined' ? window.innerWidth : 0);
