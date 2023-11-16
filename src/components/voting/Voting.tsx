@@ -1,4 +1,5 @@
-'use client'
+'use client';
+
 import '@styles/commonStyle.css';
 import { useEffect, useState } from 'react';
 import { useRecoilValue } from 'recoil';
@@ -55,4 +56,4 @@ const LoginSection = styled.div`
 
 const Margintop = styled.div`
 	height: 30px;
-`
+`;
