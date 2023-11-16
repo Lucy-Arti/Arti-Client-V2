@@ -7,9 +7,9 @@ export default function Page() {
 	return (
 		<div>
 			<Header where="main" />
-			<NavBar/>
-			<LandingHome/>
-			<Footer/>
+			<NavBar />
+			<LandingHome />
+			<Footer />
 		</div>
 	);
 }
