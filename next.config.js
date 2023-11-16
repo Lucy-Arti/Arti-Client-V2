@@ -3,6 +3,7 @@
 // const kakaoURL = require('./src/components/login/loginInfo.ts');
 
 const nextConfig = {
+	compiler: {styledComponents: true}
 	// reactStrictMode: true,
 	// async rewrites() {
 	// 	return [

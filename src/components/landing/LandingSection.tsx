@@ -36,18 +36,20 @@ const StyledSwiperSlide = styled(SwiperSlide)`
 `;
 
 const LandingSection = () => {
-	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+	const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
 
 	const handleResize = () => {
-		setWindowWidth(window.innerWidth);
+		setWindowWidth(typeof window !== 'undefined' ? window.innerWidth : 0);
 	};
 
 	useEffect(() => {
-		window.addEventListener('resize', handleResize);
-		return () => {
-			window.removeEventListener('resize', handleResize);
-		};
-	}, []); // [] 추가
+		if (typeof window !== 'undefined') {
+			window.addEventListener('resize', handleResize);
+			return () => {
+				window.removeEventListener('resize', handleResize);
+			};
+		}
+	}, []);
 
 	const handleClick = (page: string) => {
 		const router = useRouter();
