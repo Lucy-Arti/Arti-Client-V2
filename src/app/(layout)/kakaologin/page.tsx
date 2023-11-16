@@ -12,7 +12,11 @@ const KakaoLogin = () => {
 	const route = useRouter();
 	const setIsLogin = useSetRecoilState(isLoginAtom);
 
-	const code: string | null = new URL(window.location.href).searchParams.get('code');
+	let code = null;
+
+	if (typeof window !== 'undefined') {
+		code = new URL(window.location.href).searchParams.get('code');
+	}
 
 	const body: postCodeBody = {
 		authCode: code,
